@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Montserrat&family=Ubuntu&display=swap');
 
 .hello{
     margin: 0;
@@ -112,34 +113,40 @@
     font-size: 18px; /* Increase font size */
     border-radius: 50%;
   }
-  
-  /* styling of animation of text */
+
+    /* styling of animation of text */
 
 .reveal{
-  position: relative;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: all 1s;
-}
-.reveal.active{
-  transform: translateY(0px);
-  opacity: 1;
-}
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 1s;
+  }
+  .reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  
+  /* styling of animation of images */
+  
+  .image{
+    position: relative;
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: all 500ms ease;
+  }
+  .image.active{
+    transform: translateX(0px);  
+    opacity: 1;
+  }
 
-/* styling of animation of images */
+  /* ------------for styling placeholder-------------- */
+  
+  .shopinfo > ::placeholder{
+    color:black;
+  }
 
-.image{
-  position: relative;
-  transform: translateX(-100px);
-  opacity: 0;
-  transition: all 500ms ease;
-}
-.image.active{
-  transform: translateX(0px);  
-  opacity: 1;
-}
-
-/* styling of OR-horizontal line in login page*/
+  /* styling of OR-horizontal line in login page*/
 
 .orcontent {
   margin: 10px auto;
@@ -174,33 +181,32 @@
 
  left: 0;
  z-index: 1;
+ outline: none;
+ padding: 10px;
 }
 .input::placeholder {
   color: transparent;
 }
 .span{
   left: 0;
-  transition: 0.1s;
+  transition: 0.5s;
   pointer-events: none;
   z-index: 0;
 }
 
 .inputBox input:focus + span
 {
-
-  top: -18px;
-  left: 2px;
-  z-index: 10;
-  padding:  0 10px;
-  font-size: 1rem;
-  background: white;
-  color: #09abbc;
-  
+transform: translateX(0.5px) translateY(-15px);
+font-size: 0.8em;
+padding: 0 10px;
+background: white;
 }
+
+/* ///////////////for animating divs of signup and login pages////////////// */
 
 .animate_login_div1{
   animation: login;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 @keyframes login {
@@ -217,7 +223,7 @@
 
 .animate_login_div2{
   animation: login_2;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
 
 @keyframes login_2 {
