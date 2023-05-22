@@ -39,3 +39,6 @@ function image(){
         }
     }
 }
+
+//---------adding animation to login page----------//
+
